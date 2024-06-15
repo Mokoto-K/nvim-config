@@ -27,6 +27,13 @@ return {
                 },
             },
         })
+         -- Add todos to highlight in Treesitter
+        -- vim.api.nvim_set_hl(0, "TODO", { fg = "#FF6347", bg = "#2E3440", bold = true })  -- Highlight TODOs
+        -- vim.api.nvim_set_hl(0, '@comment.todo', { link = 'TODO' })  -- Link @comment.todo to TODO highlight group
     end,
 }
 
+-- TODO: test 
+-- TODO test 
+-- Todo test 
+-- Todo: test 

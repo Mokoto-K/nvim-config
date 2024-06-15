@@ -6,10 +6,6 @@ vim.o.relativenumber = true      -- Relative line numbers
 vim.o.wrap = false               -- Don't wrap long lines
 vim.o.scrolloff = 20              -- Keep 8 lines visible above/below the cursor
 
--- Adds a column of colour at column 80 of all my coding pages >>>>>>>>>>>>>>>>
-vim.api.nvim_set_hl(0, "colorcolumn", { bg = "#3B4252" })
-vim.o.colorcolumn = "80"        -- >>>>>>>>>>>>>>>>>dis over ere>>>>>>>>>>>>>>>  
-
 -- Indentation
 vim.o.shiftwidth = 4            -- Indentation width for >>, << commands
 vim.o.tabstop = 4               -- How many spaces a tab counts for
@@ -44,6 +40,18 @@ vim.o.ruler = true
 -- Auto Commands
 vim.cmd("autocmd FileType * setlocal formatoptions-=cro")  -- Avoid automatically adding comment characters
 
-
-
-
+-- -- Highlight TODO in comments using Vim syntax matching
+-- vim.api.nvim_set_hl(0, "Todo", { fg = "#FF6347", bg = "#2E3440", bold = true })  -- Custom highlight for TODO
+--
+-- -- Automatically highlight TODO comments in any file type
+-- vim.cmd([[
+--   augroup HighlightTODOs
+--     autocmd!
+--     " Match 'TODO' in comments for all filetypes
+--     autocmd BufRead,BufNewFile * syntax match Todo /TODO:/ containedin=comment
+--   augroup END
+-- ]])
+--
+-- -- Test examples:
+-- -- TODO: Implement feature
+-- -- -- TODO: Fix bug in code
