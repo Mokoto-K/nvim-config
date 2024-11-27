@@ -7,4 +7,10 @@ vim.g.maplocalleader = "\\"
 -- Bind the leader key + 'pv' to open the netrw file explorer in normal mode
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) 
 
+-- Copy buffer remap
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+
 
