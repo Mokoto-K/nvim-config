@@ -57,6 +57,16 @@ return {
             },
         })
 
+         -- Filetype-specific configuration for C (optional, restrict sources)
+        cmp.setup.filetype("c", {
+            sources = {
+                { name = "nvim_lsp" },
+                { name = "buffer" },
+                { name = "path" },
+
+            },
+        })
+
         -- LSP key mappings for navigation and actions
         local function buf_set_keymap(mode, lhs, rhs, opts)
             opts = opts or { noremap = true, silent = true }

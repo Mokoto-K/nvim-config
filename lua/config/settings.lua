@@ -19,6 +19,7 @@ vim.o.smartcase = true          -- Case-sensitive if search contains uppercase
 -- Enable seach highlighting
 vim.o.incsearch = true   -- Enable incremental search
 vim.o.hlsearch = false   -- Enable highlight of search matches
+
 -- Clipboard settings (if you want to use system clipboard)
 vim.o.clipboard = "unnamedplus" -- Use the system clipboard
 
