@@ -4,7 +4,11 @@
 vim.o.number = true              -- Show line numbers
 vim.o.relativenumber = true      -- Relative line numbers
 vim.o.wrap = false               -- Don't wrap long lines
-vim.o.scrolloff = 8              -- Keep 8 lines visible above/below the cursor
+vim.o.scrolloff = 20              -- Keep 8 lines visible above/below the cursor
+
+-- Adds a column of colour at column 80 of all my coding pages >>>>>>>>>>>>>>>>
+vim.api.nvim_set_hl(0, "colorcolumn", { bg = "#3B4252" })
+vim.o.colorcolumn = "80"        -- >>>>>>>>>>>>>>>>>dis over ere>>>>>>>>>>>>>>>  
 
 -- Indentation
 vim.o.shiftwidth = 4            -- Indentation width for >>, << commands

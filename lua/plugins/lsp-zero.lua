@@ -47,7 +47,7 @@ return {
                 { name = "nvim_lsp" },
                 { name = "buffer" },
                 { name = "path" },
-                { name = "cmdline" },
+                --{ name = "cmdline" }, commenting this out because it continues to auto complete random commands
             },
             mapping = {
                 ["<C-Space>"] = cmp.mapping.complete(),  -- Trigger completion manually
