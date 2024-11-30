@@ -91,6 +91,10 @@ return {
 
         -- Signature help (completion help)
         vim.keymap.set("i", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { noremap = true, silent = true })
+
+        -- Refactor code... in python atleast.... but i think everything will be effected.
+        vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+
     end,
 }
 
