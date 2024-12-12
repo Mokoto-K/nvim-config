@@ -29,6 +29,15 @@ return {
             }
         }
 
+        require('lspconfig').pyright.setup {
+            settings = {
+                python = {
+                    pythonPath = vim.fn.exepath("python3"),  -- Use system's Python
+                }
+            }
+        }
+
+
         -- Ensure LSP servers are installed
         lsp.ensure_installed({
             "pyright",        -- Python
