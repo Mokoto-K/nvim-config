@@ -5,3 +5,6 @@
 -- Adds a column of colour at column 80 of all my coding pages >>>>>>>>>>>>>>>>
 vim.api.nvim_set_hl(0, "colorcolumn", { bg = "#3B4252" })
 vim.o.colorcolumn = "80"        -- >>>>>>>>>>>>>>>>>dis over ere>>>>>>>>>>>>>>>  
+
+-- Add todos to highlight in the lsp, treesitter, whatever
+-- vim.api.nvim_set_hl(0, '@text.note', {link = 'TODO', bg = "#000000"})
