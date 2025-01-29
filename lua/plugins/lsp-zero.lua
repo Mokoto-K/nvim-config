@@ -44,6 +44,7 @@ return {
             "lua_ls",         -- Lua
             "bashls",         -- Bash
             "clangd",         -- C
+            "gopls",          -- Go 
         })
 
         -- LSP setup (with automatic configuration)
