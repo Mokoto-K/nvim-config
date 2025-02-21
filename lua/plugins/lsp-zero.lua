@@ -37,7 +37,6 @@ return {
             }
         }
 
-
         -- Ensure LSP servers are installed
         lsp.ensure_installed({
             "pyright",        -- Python
