@@ -1,13 +1,5 @@
 return {
-  "scalameta/nvim-metals",
-  ft = { "scala", "sbt" },
-  config = function()
-    local metals = require("metals")
-    metals.initialize_or_attach({
-      settings = {
-        showImplicitArguments = true,
-        excludedPackages = { "akka.actor.typed.javadsl", "com.example.unused" },
-      }
-    })
-  end,
+    "scalameta/nvim-metals",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    ft = { "scala", "sbt" },  -- Only load Metals for Scala and SBT files
 }

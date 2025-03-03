@@ -47,6 +47,25 @@ return {
             "clangd",         -- c++
         })
 
+
+        -- Metals Configuration for Scala
+        local metals_config = require("metals").bare_config()
+
+        metals_config.settings = {
+            showImplicitArguments = true,
+            showInferredType = true,
+        }
+
+        metals_config.init_options.statusBarProvider = "on"
+
+        -- Auto-start Metals when opening Scala files
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = { "scala", "sbt" },
+            callback = function()
+                require("metals").initialize_or_attach(metals_config)
+            end,
+        })
+
         -- LSP setup (with automatic configuration)
         lsp.setup()
 
@@ -67,7 +86,7 @@ return {
             },
         })
 
-         -- Filetype-specific configuration for C (optional, restrict sources)
+        -- Filetype-specific configuration for C (optional, restrict sources)
         cmp.setup.filetype("c", {
             sources = {
                 { name = "nvim_lsp" },
