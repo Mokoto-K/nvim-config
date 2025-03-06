@@ -45,6 +45,7 @@ return {
             "clangd",         -- C
             "gopls",          -- Go
             "clangd",         -- c++
+            "sqls",           -- sql
         })
 
 
